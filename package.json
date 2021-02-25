@@ -1,23 +1,25 @@
 {
-  "dependencies": {
-    "vue": "^3.0.5"
-  },
-  "name": "ethereal",
-  "description": "ethereal Vue",
-  "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
+  "name": "vue-ex",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wangtaostar/Ethereal.git"
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wangtaostar/Ethereal/issues"
-  },
-  "homepage": "https://github.com/wangtaostar/Ethereal#readme"
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^7.0.0-0"
+  }
 }
