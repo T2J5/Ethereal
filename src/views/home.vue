@@ -1,15 +1,18 @@
 <template>
-  <div>
-    Home
+  <div class="home">
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-    export default {
-        methods: {
-            add() {
-                this.$store.commit('increment')
-            }
-        }
-    }
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    HelloWorld
+  }
+}
 </script>
