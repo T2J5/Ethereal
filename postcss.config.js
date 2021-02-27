@@ -1,9 +1,10 @@
 module.exports = {
-  plugins: [
-    // 配置 Autoprefixer 插件
-    require('autoprefixer')({
-      // 游览器最近的两个版本
-      'overrideBrowserslist': ['last 2 versions']
-    })
-  ],
+  plugins: {
+    
+    "postcss-pxtorem": {
+      rootValue: 37.5, // Vant 官方根字体大小是 37.5
+      propList: ['*'],
+      selectorBlackList: ['.norem'] // 过滤掉.norem-开头的class，不进行rem转换
+    }
+  },
 };

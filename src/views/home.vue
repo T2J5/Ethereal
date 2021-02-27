@@ -1,18 +1,40 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="demo">
+      Hello, TJ
+    </div>
+    <van-button 
+      type="primary" 
+      size="large"
+    >
+      大号按钮
+    </van-button>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 export default {
   name: 'Home',
   components: {
-    HelloWorld
-  }
+  },
+  setup () {
+    console.log('ref', ref)
+    const route = useRoute() 
+    let currentId = ref(0)
+    currentId = route.params.id //路由跳转id
+    return {
+      currentId
+    }
+  },
+  
 }
 </script>
+<style>
+.demo {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
+</style>
+
